@@ -15,3 +15,5 @@ class AppRouter extends RootStackRouter {
   ];
 
 }
+
+// flutter pub get build_runner build
