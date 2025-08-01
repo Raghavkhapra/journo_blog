@@ -21,13 +21,13 @@ class _OnboardScreenState extends State<OnboardScreen> {
             child: Column(
               children: [
                 Image.asset(
-                  "assets/images/main_logo_white.png",
+                  Assets.assetsImagesMainLogoWhite,
                   color: MyColors.primaryColor,
-                  height: 50,
-                  width: 150,
+                  height: 50.h,
+                  width: 150.w,
                 ),
-                const SizedBox(
-                  height: 40,
+                SizedBox(
+                  height: 40.h,
                 ),
                 Expanded(
                   child: PageView(
@@ -43,24 +43,26 @@ class _OnboardScreenState extends State<OnboardScreen> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: MyColors.primaryColor,
                         minimumSize:
-                            Size(MediaQuery.of(context).size.width, 44),
+                            Size(MediaQuery.of(context).size.width, 44.h),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5))),
-                    onPressed: () {},
+                    onPressed: () => AutoRouter.of(context).push(const AuthRoute()),
                     child: const Text(
                       "Get Started",
                       style: TextStyle(color: Colors.white),
-                    )),
-                const SizedBox(
-                  height: 50,
+                    )
+                  ),
+                SizedBox(
+                  height: 50.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
+                    Text(
                       "Skip",
                       style: TextStyle(
                           color: MyColors.primaryColor,
+                          fontSize: 15.sp,
                           fontWeight: FontWeight.w700),
                     ),
                     SmoothPageIndicator(
@@ -79,8 +81,8 @@ class _OnboardScreenState extends State<OnboardScreen> {
                     )
                   ],
                 ),
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: 30.h,
                 )
               ],
             ),

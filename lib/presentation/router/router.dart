@@ -12,8 +12,9 @@ class AppRouter extends RootStackRouter {
     // of the replaceInRouteName property
     AutoRoute(page: SplashScreenRoute.page , path : "/" , initial:  true),
     AutoRoute(page: OnboardScreenRoute.page , path : "/onboard" ),
+    AutoRoute(page: AuthRoute.page , path : "/auth" ),
   ];
 
 }
 
-// flutter pub get build_runner build
+// flutter pub run build_runner build
